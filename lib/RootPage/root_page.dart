@@ -8,7 +8,6 @@ import '../Mine/mine.dart';
 class RootPage extends StatefulWidget {
   const RootPage({Key? key,this.title=''}) : super(key: key);
   final String title;
-
   @override
   State<RootPage> createState() => _RootPageState();
 }
@@ -17,14 +16,11 @@ class _RootPageState extends State<RootPage> {
 
   int currentIndex = 0;
   void _selectTab(int index){
-    print("点击了$index");
     setState(() {
       currentIndex = index;
     });
   }
   List pagelists = [Home(),Move(),Discover(), Mine()];
-
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
